@@ -81,6 +81,18 @@ if ($ADMIN->fulltree) {
     $otheruserfieldlabel = get_string('remoteotheruserfield', 'enrol_database');
     $otheruserfielddesc  = get_string('remoteotheruserfield_desc', 'enrol_database');
     $settings->add(new admin_setting_configtext('enrol_database/remoteotheruserfield', $otheruserfieldlabel, $otheruserfielddesc, ''));
+    $groupcodefieldlabel = get_string('remotegroupcodefield', 'enrol_database');
+    $groupcodefielddesc  = get_string('remotegroupcodefield_desc', 'enrol_database');
+    $settings->add(new admin_setting_configtext('enrol_database/remotegroupcodefield',
+                                                $groupcodefieldlabel,
+                                                $groupcodefielddesc,
+                                                ''));
+    $groupnamefieldlabel = get_string('remotegroupnamefield', 'enrol_database');
+    $groupnamefielddesc  = get_string('remotegroupnamefield_desc', 'enrol_database');
+    $settings->add(new admin_setting_configtext('enrol_database/remotegroupnamefield',
+                                                $groupnamefieldlabel,
+                                                $groupnamefielddesc,
+                                                ''));
 
     if (!during_initial_install()) {
         $options = get_default_enrol_roles(context_system::instance());
